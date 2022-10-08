@@ -1,6 +1,6 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/SarTolik/frontend-project-46/workflows/hexlet-check/badge.svg)](https://github.com/SarTolik/frontend-project-46/actions)
-[![Front46](https://github.com//SarTolik/frontend-project-46/workflows/fp-46.yml/badge.svg)](https://github.com/SarTolik/frontend-project-46/actions)
+[![Front 46](https://github.com//SarTolik/frontend-project-46/actions/workflows/fp-46.yml/badge.svg)](https://github.com/SarTolik/frontend-project-46/actions/workflows/fp-46.yml)
 
 ### CodeClimate:
 <a href="https://codeclimate.com/github/SarTolik/frontend-project-46/maintainability"><img src="https://api.codeclimate.com/v1/badges/c53cde565bd2df71361d/maintainability" /></a>
