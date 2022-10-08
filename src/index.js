@@ -2,11 +2,15 @@ import { readFileSync } from 'fs';
 import path from 'path';
 import findDiff from '../src/findDiff.js';
 
-const getFilePath = (file) => path.resolve(process.cwd(), file);
+const readFile = (file) => {
+  const fullPath = path.resolve(process.cwd(), file); 
+  const data = readFileSync(fullPath, 'utf-8');
+  return data;
+}
 
 const genDiff = (file1, file2) => {
-  const data1 = readFileSync(getFilePath(file1), 'utf-8');
-  const data2 = readFileSync(getFilePath(file2), 'utf-8');
+  const data1 = readFile(file1);
+  const data2 = readFile(file2);
 
   const parseData1 = JSON.parse(data1);
   const parseData2 = JSON.parse(data2);
