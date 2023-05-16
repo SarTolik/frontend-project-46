@@ -1,12 +1,12 @@
-import { readFileSync } from 'fs';
+import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
 import findDiff from './findDiff.js';
 
-const readFile = (file) => {
-  const fullPath = path.resolve(process.cwd(), file);
-  const data = readFileSync(fullPath, 'utf-8');
-  return data;
-};
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
+const getFixturePath = (filename) => path.resolve(__dirname, '..', '__fixtures__', filename);
+const readFile = (filename) => fs.readFileSync(getFixturePath(filename), 'utf8');
 
 const genDiff = (file1, file2) => {
   const data1 = readFile(file1);
